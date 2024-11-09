@@ -20,6 +20,11 @@ export const Title = styled.h2`
   color: #333;
 `;
 
+export const WarningMessage = styled.p`
+    color: #464646;
+    margin: 1em 0 2em;
+`;
+
 export const ChartContainer = styled.div`
   margin-top: 30px;
   display: flex;

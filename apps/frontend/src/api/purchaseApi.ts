@@ -14,6 +14,11 @@ type Queries = {
 export const purchaseFrequencyApi = async (queries?: Queries): Promise<PurchaseFrequencyData[]> => {
   let url = `/purchase-frequency`;
   if (queries) url += `?from=${queries.from}&to=${queries.to}`
-  const response: AxiosResponse<PurchaseFrequencyData[]> = await axiosInstance.get(url);
-  return response.data;
+  try {
+    const response: AxiosResponse<PurchaseFrequencyData[]> = await axiosInstance.get(url);
+    return response.data;
+  } catch (e) {
+    return [];
+  }
+
 }

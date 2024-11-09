@@ -1,7 +1,7 @@
 import { ResponsiveBar } from '@nivo/bar'
 import styled from "styled-components";
-import {useCallback} from "react";
-import {PurchaseFrequencyData} from "../..//types";
+import { useCallback } from "react";
+import { PurchaseFrequencyData } from "../../types";
 
 const ChartContainer = styled.div`
     width: 100%;
@@ -35,7 +35,7 @@ export const BarChart = ({ data }: BarChartProps) => {
         data={dataWithColor()}
         keys={['count']}
         indexBy="range"
-        margin={{ top: 10, right: 60, bottom: 50, left: 60 }}
+        margin={{ top: 20, right: 60, bottom: 50, left: 60 }}
         padding={0.3}
         layout="vertical"
         valueScale={{ type: 'linear' }}
