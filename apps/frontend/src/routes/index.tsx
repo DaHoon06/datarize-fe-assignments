@@ -7,6 +7,7 @@ import {
 import { HomePage } from "../pages/HomePage.tsx";
 import BaseLayout from "../layouts/BaseLayout.tsx";
 import {CustomerDetailsPage} from "../pages/CustomerDetailsPage.tsx";
+import {NotFoundPage} from "../pages/NotFoundPage.tsx";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -16,6 +17,7 @@ export const router = createBrowserRouter(
         <Route element={<HomePage />} path={'/'} />
         <Route element={<CustomerDetailsPage />} path={'/customer/:id'} />
       </Route>
+      <Route element={<NotFoundPage />} path="*" />
     </>
   ),
   {
