@@ -18,6 +18,7 @@ export const CustomerTable = ({ customers }: CustomerTableProps): ReactElement =
     <Table>
       <thead>
       <tr>
+        <Th>ID</Th>
         <Th>고객 명</Th>
         <Th>구매 가격</Th>
         <Th>구매 수</Th>
@@ -26,12 +27,13 @@ export const CustomerTable = ({ customers }: CustomerTableProps): ReactElement =
       <tbody>
       {customers?.length === 0 ? (
         <Tr>
-          <Td colSpan={3}>검색 결과가 없습니다.</Td>
+          <Td colSpan={4}>검색 결과가 없습니다.</Td>
         </Tr>
       ) : (
         <>
           {customers?.map((customer) => (
             <Tr key={`customer_${customer.id}`} onClick={() => handleClick(customer.id, customer.name)}>
+              <Td>{customer.id}</Td>
               <Td>{customer.name}</Td>
               <Td>{customer.totalAmount.toLocaleString()}원</Td>
               <Td>{customer.count}</Td>
