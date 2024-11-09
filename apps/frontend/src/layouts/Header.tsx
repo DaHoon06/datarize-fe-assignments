@@ -2,16 +2,21 @@ import {ReactElement} from "react";
 import styled from "styled-components";
 import { FaBell, FaUserCircle } from "react-icons/fa";
 import DatarizeLogo from "../components/logo/DatarizeLogo.tsx";
+import {Link} from "react-router-dom";
 
 const HeaderContainer = styled.header`
-  width: 100%;
-  height: 70px;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 2em;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
 
   .header-box {
     display: flex;
@@ -41,7 +46,9 @@ const IconWrapper = styled.div`
 export const Header = (): ReactElement => {
   return (
     <HeaderContainer>
-      <DatarizeLogo />
+      <Link to={'/'}>
+        <DatarizeLogo />
+      </Link>
       <div className="header-box">
         <IconWrapper>
           <FaBell className="icon" />

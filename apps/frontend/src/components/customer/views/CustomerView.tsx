@@ -1,11 +1,10 @@
 import {ReactElement, useState} from "react";
-import {CustomerTable} from "./CustomerTable.tsx";
-import {Sort} from "../../types";
-import {useCustomerQuery} from "../../state/queries/hooks/useCustomerQuery.ts";
-import useDebounce from "../../hooks/useDebounce.ts";
-import {Spinner} from "../ui/Spinner.tsx";
-import {CustomerOption} from "./CustomerOption.tsx";
-
+import {CustomerTable} from "../CustomerTable.tsx";
+import {Sort} from "../../../types";
+import {useCustomerQuery} from "../../../state/queries/hooks/useCustomerQuery.ts";
+import useDebounce from "../../../hooks/useDebounce.ts";
+import {Spinner} from "../../ui/Spinner.tsx";
+import {CustomerOption} from "../CustomerOption.tsx";
 
 export const CustomerView = (): ReactElement => {
   const [sort, setSort] = useState<Sort>('desc');
@@ -23,8 +22,8 @@ export const CustomerView = (): ReactElement => {
   return (
     <div>
       <h2>한 달 동안 가장 많이 구매한 고객 리스트</h2>
-      <CustomerOption sort={sort} keyword={keyword} onChangeInput={setKeyword} onClickSortButton={setSort} />
-      <CustomerTable customers={data} />
+      <CustomerOption sort={sort} keyword={keyword} onChangeInput={setKeyword} onClickSortButton={setSort}/>
+      <CustomerTable customers={data}/>
     </div>
   )
 }
