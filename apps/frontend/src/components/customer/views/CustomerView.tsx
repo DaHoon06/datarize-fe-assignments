@@ -7,6 +7,7 @@ import {Spinner} from "../../ui/Spinner.tsx";
 import {CustomerOption} from "../CustomerOption.tsx";
 import styled from "styled-components";
 import customerListSorting from "../../../services/customer/customerSorting.ts";
+import {SpinnerBox} from "../../ui/SpinnerBox.tsx";
 
 
 const CustomerViewWrapper = styled.div`
@@ -38,13 +39,17 @@ export const CustomerView = (): ReactElement => {
     refetchOnWindowFocus: false,
   });
 
-  if (isLoading) return <div><Spinner /></div>
-
   return (
     <CustomerViewWrapper>
       <Title>한 달 동안 가장 많이 구매한 고객 리스트</Title>
       <CustomerOption sort={sort} keyword={keyword} onChangeInput={setKeyword} onClickSortButton={setSort}/>
-      <CustomerTable customers={customerListSorting(data || [], sort)}/>
+      {isLoading ? (
+        <SpinnerBox>
+          <Spinner />
+        </SpinnerBox>
+        ) : (
+        <CustomerTable customers={customerListSorting(data || [], sort)}/>
+      )}
     </CustomerViewWrapper>
   )
 }

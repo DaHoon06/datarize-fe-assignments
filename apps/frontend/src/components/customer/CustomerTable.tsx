@@ -20,8 +20,8 @@ export const CustomerTable = ({ customers }: CustomerTableProps): ReactElement =
       <tr>
         <Th>ID</Th>
         <Th>고객 명</Th>
-        <Th>구매 가격</Th>
-        <Th>구매 수</Th>
+        <Th>총 구매 횟수</Th>
+        <Th>총 구매 금액</Th>
       </tr>
       </thead>
       <tbody>
@@ -35,8 +35,8 @@ export const CustomerTable = ({ customers }: CustomerTableProps): ReactElement =
             <Tr key={`customer_${customer.id}`} onClick={() => handleClick(customer.id, customer.name)}>
               <Td>{customer.id}</Td>
               <Td>{customer.name}</Td>
+              <Td>{customer.count}회</Td>
               <Td>{customer.totalAmount.toLocaleString()}원</Td>
-              <Td>{customer.count}</Td>
             </Tr>
           ))}
         </>
