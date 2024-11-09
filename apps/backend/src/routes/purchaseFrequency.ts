@@ -5,9 +5,10 @@ const router = new Router()
 
 router.get('/api/purchase-frequency', async (ctx) => {
   try {
-    if (Math.random() <= 1) {
-      throw new Error('Intentional error occurred')
-    }
+    // 의도적인 에러 발생 로직 삭제
+    // if (Math.random() <= 1) {
+    //   throw new Error('Intentional error occurred')
+    // }
 
     const { from, to } = ctx.query
 
