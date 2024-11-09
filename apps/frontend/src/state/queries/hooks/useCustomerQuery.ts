@@ -17,7 +17,7 @@ type UseQueryCustomOptions<TQueryFnData = unknown, TData = TQueryFnData> = Omit<
 
 export const useCustomerQuery = (queries: Queries, queryOptions?: UseQueryCustomOptions<CustomerList[], CustomerList[]>) => {
   return useQuery<CustomerList[], ResponseError>({
-    queryKey: [queryKeys.customer.list, queries],
+    queryKey: [queryKeys.customer.list, queries.name],
     queryFn: () => customerListApi(queries),
     ...queryOptions,
   });
