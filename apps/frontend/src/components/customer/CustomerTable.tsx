@@ -1,6 +1,6 @@
 import {ReactElement} from 'react';
 import {Table, Th, Td, Tr} from './styled/CustomerTable.styled.ts';
-import {CustomerList} from "../../types";
+import {CustomerList} from "@/types";
 import { useNavigate } from 'react-router-dom';
 
 interface CustomerTableProps {

@@ -1,4 +1,4 @@
-import {CustomerList, Sort} from "../../types";
+import {CustomerList, Sort} from "@/types";
 
 function customerListSorting(data: CustomerList[], sort: Sort): CustomerList[] {
   if (data.length > 0) return data.sort((a, b) => {

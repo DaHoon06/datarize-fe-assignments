@@ -1,7 +1,6 @@
 import { DefaultTheme } from 'styled-components';
 
-export const colors = {
-};
+export const colors = {};
 
 export const zIndex = {
   DRAWER: 500,
@@ -20,7 +19,6 @@ const mixins: MixinsTheme = {
     align-items: center;
     justify-content: center;
   `,
-  // flex
   flexBox: (direction = 'row', align = 'center', justify = 'center') => `
     display: flex;
     flex-direction: ${direction};
@@ -44,33 +42,6 @@ const media: MediaQueryTheme = {
   pc: customMediaQuery(1440),
   tablet: customMediaQuery(769),
   mobile: customMediaQuery(576),
-};
-
-const scroll = {
-  theme: () => `
-    overflow-y: auto;
-    overflow-x: hidden;
-    box-sizing: border-box;
-
-    &::-webkit-scrollbar {
-      width: 8px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background-color: #ededed;
-      border-radius: 0;
-    }
-
-    &::-webkit-scrollbar-track {
-      background-color: transparent;
-    }
-
-    @media screen and (max-width: 769px) {
-      &::-webkit-scrollbar {
-        width: 0;
-      }
-    }
-  `,
 };
 
 export const theme: DefaultTheme = {

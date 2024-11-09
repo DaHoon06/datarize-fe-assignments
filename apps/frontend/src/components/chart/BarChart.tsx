@@ -1,7 +1,7 @@
 import { ResponsiveBar } from '@nivo/bar'
 import styled from "styled-components";
 import { useCallback } from "react";
-import { PurchaseFrequencyData } from "../../types";
+import { PurchaseFrequencyData } from "@/types";
 
 const ChartContainer = styled.div`
     width: 100%;

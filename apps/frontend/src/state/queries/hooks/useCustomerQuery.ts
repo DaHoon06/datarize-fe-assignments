@@ -1,8 +1,8 @@
-import {QueryKey, useQuery, UseQueryOptions} from "@tanstack/react-query";
-import {AxiosError} from "axios";
-import {queryKeys} from "../keys.ts";
-import {customerDetailsApi, customerListApi} from "../../../api";
-import {CustomerList, CustomerPurchaseDetail, Queries} from "../../../types";
+import { QueryKey, useQuery, UseQueryOptions } from "@tanstack/react-query";
+import { AxiosError } from "axios";
+import { queryKeys } from "../keys.ts";
+import { customerDetailsApi, customerListApi } from "@/api";
+import { CustomerList, CustomerPurchaseDetail, Queries } from "@/types";
 
 type ResponseError = AxiosError<{
   statusCode: number;

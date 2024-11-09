@@ -4,10 +4,10 @@ import {
   Navigate,
   Route,
 } from 'react-router-dom';
-import { HomePage } from "../pages/HomePage.tsx";
-import BaseLayout from "../layouts/BaseLayout.tsx";
-import {CustomerDetailsPage} from "../pages/CustomerDetailsPage.tsx";
-import {NotFoundPage} from "../pages/NotFoundPage.tsx";
+import { HomePage } from "@/pages/HomePage.tsx";
+import BaseLayout from "@/layouts/BaseLayout.tsx";
+import {CustomerDetailsPage} from "@/pages/CustomerDetailsPage.tsx";
+import {NotFoundPage} from "@/pages/NotFoundPage.tsx";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(

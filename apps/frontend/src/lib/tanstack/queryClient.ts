@@ -10,7 +10,7 @@ export const queryClient = new QueryClient({
       retry: 1,
       useErrorBoundary: true,
       staleTime: 60 * 1000,
-      cacheTime: 60 * 60 * 1000 * 24,
+      cacheTime: 60 * 10 * 1000,
       keepPreviousData: true,
     },
     mutations: {

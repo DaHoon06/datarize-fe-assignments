@@ -1,6 +1,6 @@
 import {ReactElement, useState} from "react";
 import {BarChart} from "../chart/BarChart.tsx";
-import {usePurchaseQuery} from "../../state/queries/hooks/usePurchaseQuery.ts";
+import {usePurchaseQuery} from "@/state/queries/hooks/usePurchaseQuery.ts";
 import CustomDatePicker from "../common/DatePicker.tsx";
 import * as S from './styled/PurchaseStatistics.styled.ts';
 import {Spinner} from "../ui/Spinner.tsx";

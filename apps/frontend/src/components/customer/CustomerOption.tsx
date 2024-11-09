@@ -1,6 +1,7 @@
-import {Sort} from "../../types";
+import {Sort} from "@/types";
 import * as S from './styled/CustomerOption.styled.ts';
 import { FaSortAmountUpAlt, FaSortAmountDownAlt } from "react-icons/fa";
+
 interface CustomerOptionProps {
   sort: Sort;
   onClickSortButton: (sort: Sort) => void;

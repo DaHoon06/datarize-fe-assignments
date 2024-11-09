@@ -1,5 +1,5 @@
 import {useLocation, useParams} from "react-router";
-import {useCustomerDetailQuery} from "../../../state/queries/hooks/useCustomerQuery.ts";
+import {useCustomerDetailQuery} from "@/state/queries/hooks/useCustomerQuery.ts";
 import * as S from '../styled/CustomerDetails.styled.ts';
 import {Spinner} from "../../ui/Spinner.tsx";
 import {SpinnerBox} from "../../ui/SpinnerBox.tsx";
