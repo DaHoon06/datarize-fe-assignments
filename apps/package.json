@@ -6,7 +6,8 @@
   ],
   "scripts": {
     "start-server": "yarn workspace backend start",
-    "start-client": "yarn workspace frontend dev"
+    "start-client": "yarn workspace frontend dev",
+    "jest-start-client": "yarn workspace frontend jest"
   },
   "prettier": {
     "singleQuote": true,
