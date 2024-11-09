@@ -21,7 +21,7 @@ export const Title = styled.h2`
 `;
 
 export const WarningMessage = styled.p`
-    color: #464646;
+    color: #ff5e5e;
     margin: 1em 0 2em;
 `;
 

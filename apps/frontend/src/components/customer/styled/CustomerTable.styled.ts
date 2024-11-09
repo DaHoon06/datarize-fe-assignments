@@ -2,10 +2,13 @@ import styled from "styled-components";
 
 const Table = styled.table`
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
     font-size: 16px;
     color: #333;
     background-color: #fff;
+    border-radius: 8px; 
+    overflow: hidden;   
 `;
 
 const Th = styled.th`
@@ -14,17 +17,19 @@ const Th = styled.th`
     padding: 10px;
     border-bottom: 2px solid #ddd;
     text-align: center;
+    border-top-left-radius: 8px;  
+    border-top-right-radius: 8px; 
 `;
 
 const Tr = styled.tr`
-  &:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-    
-  &:hover {
-    cursor: pointer;
-    background-color: #f1f1f1;
-  }
+    &:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: #f1f1f1;
+    }
 `;
 
 const Td = styled.td`

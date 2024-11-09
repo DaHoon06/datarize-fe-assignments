@@ -23,7 +23,7 @@ export const customerListApi = async (queries: Queries): Promise<CustomerList[]>
  * @return {CustomerPurchaseDetail[]} id에 해닿하는 고객이 구매한 데이터를 반환한다.
  */
 export const customerDetailsApi = async (id: number): Promise<CustomerPurchaseDetail[]> => {
-  const url = `/customers/${id}/purchases`;
-  const response: AxiosResponse<CustomerPurchaseDetail[]> = await axiosInstance.get(url);
-  return response.data;
+    const url = `/customers/${id}/purchases`;
+    const response: AxiosResponse<CustomerPurchaseDetail[]> = await axiosInstance.get(url);
+    return response.data;
 }

@@ -21,7 +21,7 @@ export const DatePickerWrapper = styled.div`
     .react-datepicker__input-container input:focus {
         outline: none;
         border-color: #cbcbcb;
-        box-shadow: 0 0 8px rgba(76, 175, 80, 0.2);
+        box-shadow: 0 0 8px rgba(90, 91, 90, 0.2);
     }
 
     .react-datepicker {

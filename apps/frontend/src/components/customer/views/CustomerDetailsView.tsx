@@ -2,8 +2,11 @@ import {useLocation, useParams} from "react-router";
 import {useCustomerDetailQuery} from "../../../state/queries/hooks/useCustomerQuery.ts";
 import * as S from '../styled/CustomerDetails.styled.ts';
 import {Spinner} from "../../ui/Spinner.tsx";
+import {SpinnerBox} from "../../ui/SpinnerBox.tsx";
+import {useNavigate} from "react-router-dom";
 
 export const CustomerDetailsView = () => {
+  const navigate = useNavigate();
   const {id} = useParams();
   const location = useLocation();
   const { name } = location.state || {};
@@ -11,13 +14,18 @@ export const CustomerDetailsView = () => {
     staleTime: 10 * 60 * 1000,
     cacheTime: 15 * 60 * 1000,
     refetchOnWindowFocus: false,
+    useErrorBoundary: () => {
+      navigate('/404', {replace: true});
+      return true;
+    }
   });
 
-  if (isLoading) return <div><Spinner /></div>
+  if (isLoading) return <SpinnerBox><Spinner /></SpinnerBox>
 
   return (
     <S.PageContainer>
-      <S.Title>{name} 님의 구매 내역입니다.</S.Title>
+      <S.Title><span className={'user'}>{name}</span> 님의 구매 내역입니다.</S.Title>
+
       <S.ProductList>
         {data?.map(value => (
           <S.ProductCard key={`user_product_${value.product}_${value.date}`}>

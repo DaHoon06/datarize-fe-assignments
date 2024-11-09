@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { ReactElement } from "react";
 import { MdHome } from "react-icons/md";
 import { motion } from "framer-motion";
+import {Link} from "react-router-dom";
 
 const SideBarContainer = styled(motion.aside)`
     width: 200px;
@@ -11,14 +12,10 @@ const SideBarContainer = styled(motion.aside)`
     padding: 0 1em;
     z-index: 10;
     
-    //@media screen and (max-width: 765px) {
-    //    display: none;
-    //}
-    
     ul {
         margin-top: 1.25em;
     }
-    ul li {
+    ul li a {
         margin: 0.4em 0;
         border: 1px solid transparent;
         height: 40px;
@@ -47,8 +44,10 @@ export const SideBar = ({isVisible}: SideBarProps): ReactElement => {
     >
       <ul>
         <li className="active">
-          <MdHome size={20} color="#222" />
-          Home
+          <Link to={'/'}>
+            <MdHome size={20} color="#222" />
+            Home
+          </Link>
         </li>
       </ul>
     </SideBarContainer>

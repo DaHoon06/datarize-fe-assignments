@@ -16,16 +16,20 @@ export const Input = styled.input`
     box-sizing: border-box;
     padding: 8px;
     font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid #e0e0e0;
     max-width: 300px;
     width: 100%;
     height: 36px;
+    border-radius: 8px;
     background-color: #f9f9f9;
+    color: #333;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 
     &:focus {
         outline: none;
         border-color: #9a9a9a;
+        box-shadow: 0 0 8px rgba(90, 91, 90, 0.2);
     }
 `;
 
