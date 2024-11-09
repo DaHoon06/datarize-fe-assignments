@@ -13,7 +13,12 @@ type CustomerPurchaseDetail = {
   quantity: number;
 }
 
+type Sort = 'asc' | 'desc';
+type Queries = {
+  sortBy: Sort,
+  name?: string
+}
 
 export type {
-  CustomerList, CustomerPurchaseDetail
+  CustomerList, CustomerPurchaseDetail, Sort, Queries
 }

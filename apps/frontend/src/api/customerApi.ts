@@ -1,22 +1,20 @@
 import {axiosInstance} from "../lib/axios";
 import {AxiosResponse} from "axios";
-import {CustomerList, CustomerPurchaseDetail} from "../types";
-
-type Sort = 'asc' | 'desc';
-type Queries = {
-  sortBy: Sort,
-  name?: string
-}
+import {CustomerList, CustomerPurchaseDetail, Queries} from "../types";
 
 /**
  * @description 고객 목록을 반환한다.
  * @param {Queries} queries 정렬 | 고객이름
  */
 export const customerListApi = async (queries: Queries): Promise<CustomerList[]> => {
-  let url = `/customers?sortBy=${queries?.sortBy}`;
-  if (queries?.name) url += `&name=${queries.name}`;
-  const response: AxiosResponse<CustomerList[]>  = await axiosInstance.get(url);
-  return response.data
+  try {
+    let url = `/customers?sortBy=${queries?.sortBy}`;
+    if (queries?.name) url += `&name=${queries.name}`;
+    const response: AxiosResponse<CustomerList[]>  = await axiosInstance.get(url);
+    return response.data;
+  } catch (e) {
+    return [];
+  }
 }
 
 /**
