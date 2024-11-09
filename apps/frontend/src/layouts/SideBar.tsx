@@ -11,6 +11,10 @@ const SideBarContainer = styled(motion.aside)`
     padding: 0 1em;
     z-index: 10;
     
+    //@media screen and (max-width: 765px) {
+    //    display: none;
+    //}
+    
     ul {
         margin-top: 1.25em;
     }
@@ -22,6 +26,7 @@ const SideBarContainer = styled(motion.aside)`
         align-items: center;
         padding: 0 1em;
         color: #222;
+        gap: 10px;
     }
 
     .active {
@@ -43,8 +48,8 @@ export const SideBar = ({isVisible}: SideBarProps): ReactElement => {
       <ul>
         <li className="active">
           <MdHome size={20} color="#222" />
+          Home
         </li>
-        <li>2</li>
       </ul>
     </SideBarContainer>
   );
